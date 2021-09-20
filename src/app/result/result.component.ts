@@ -24,7 +24,7 @@ export class ResultComponent implements OnInit {
   }
 
   isUndefinied(): boolean{
-    return (this.data == undefined);
+    return ((this.data == undefined) || (this.data.error != undefined));
   }
 
 }

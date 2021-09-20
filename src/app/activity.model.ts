@@ -6,6 +6,7 @@ export class Activity {
     link: string;
     key: string;
     accessibility: string;
+    error: string;
     constructor(data: Activity) {
         this.activity = data.activity;
         this.type = data.type;
@@ -14,5 +15,6 @@ export class Activity {
         this.link = data.link;
         this.key = data.key;
         this.accessibility = data.accessibility;
+        this.error = data.error;
     }
   }

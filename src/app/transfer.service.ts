@@ -16,7 +16,7 @@ export class TransferService {
     this.temp = new BehaviorSubject<Activity>(this.data)
     this.data$ = this.temp.asObservable();
     this.data$.subscribe(res =>
-      console.log('ici c constructor' +res)
+      console.log('Res : ' +res)
       )
   }
 
