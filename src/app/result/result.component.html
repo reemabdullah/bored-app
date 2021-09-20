@@ -2,28 +2,19 @@
     <div class="w-full max-w-xs">
       <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <img src="../../assets/logo.png" class="logo" />
-        <p class="block text-gray-700 text-sm font-bold mb-2"> You can : </p>
+        <p class="block text-gray-700 text-xl font-bold mb-2"> You can : </p>
         <div *ngIf="isUndefinied()">
             <p class="block text-gray-700 text-sm mb-2">
                 Oops ! There is nothing you can do...
             </p>
         </div>
         <div *ngIf="!isUndefinied()">
-            <p class="block text-gray-700 text-sm mb-2">
+            <p class="block text-gray-700 text-base mb-6">
                 {{this.data.activity}}
             </p>
-            <p class="block text-gray-700 text-sm mb-2">
-                Type : {{this.data.type}}
-            </p>
-            <p class="block text-gray-700 text-sm mb-2">
-                Participants : {{this.data.participants}}
-            </p>
-            <p class="block text-gray-700 text-sm mb-2">
-                Price {{this.data.price}}
-            </p>
-            <p class="block text-gray-700 text-sm mb-2">
-                Link : {{this.data.link}}
-            </p>
+            <p class="block text-sm mb-2 text-gray-800 italic" >Price : {{this.data.price}} €</p>
+            <p class="block text-sm mb-2 text-gray-800 italic" >Number of participants : {{this.data.participants}}</p>
+            <a href="{{this.data.link}}" class="block text-indigo-500 text-sm mb-2 italic truncate">{{this.data.link}}</a>
         </div>
         <div class="flex items-center justify-center">
           <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" [routerLink]="['/']">

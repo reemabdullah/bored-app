@@ -10,9 +10,9 @@ import { TransferService } from '../transfer.service';
 })
 export class FormComponent implements OnInit {
 
-  nbparticipants = '';
-  minprice = '';
-  maxprice = '';
+  nbparticipants = '1';
+  minprice = '0';
+  maxprice = '0';
   valid = {
     nbparticipants: true,
     minprice: true,
